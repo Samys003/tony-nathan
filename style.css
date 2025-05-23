@@ -20,6 +20,9 @@ ul, ol, li {
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body {
    
    font-family: "Poppins", sans-serif;
@@ -35,6 +38,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: var(--default-padding);
+    z-index: 999;
+
 }
 
 header menu {
@@ -315,4 +320,93 @@ contato .li{
     display: grid;
     place-content: center;
     border-top: 2px solid var(--secundary-color);
+}
+
+@media(max-width:1024px){
+    :root{
+        default-
+    }
+    header{
+        position: absolute;
+        left: 0;
+        top: 64px;
+        background-color: transparent;
+
+    }
+    header menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 64px;
+    background-color: var(--primary-color);
+    color: #FFF;
+    justify-content: space-evenly;
+
+    }
+    header li:hover{
+        color: var(--primary-color);
+    }
+    .home {
+        grid-template-rows: none;
+    }
+    .home .container-produtos{
+        display: none;
+    }
+    .container-slogan{
+        flex-direction: column-reverse;
+        gap: 128px;
+        align-items: center;
+    }
+    .container-slogan .slogan{
+        width: 100%;
+    }
+    .container-produtos{
+        gap: 32px;
+        border: none;
+    }
+    .cardapio-item{
+        border: none;
+    }
+    .pizza{
+        width: 100%;
+    }
+    .pizza :nth-child(4),
+    .pizza :nth-child(3),
+    .pizza :nth-child(5){
+        display: none;
+    }
+    .servicos-container{
+        gap: 32px;
+        flex-direction: column;
+    }
+    .servico-item{
+        height: 260px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .servico-item p{
+        width: 300px;
+    }
+    .contato:nth-child(2){
+        display: none;
+    }
+    .contato {
+        padding: 0;
+    }
+    .contatos-container{
+        height: 400px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+    .contatos-container .logo{
+        width: 50%;
+        
+    }
+    .copy-right{
+        margin-bottom: 64px;
+    }
 }
